@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Santa Fe</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav {
+            background-color: #005b96;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav a {
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            background-color: #0074cc;
+            color: #fff;
+            border-radius: 5px;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+        }
+        .content h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .content p {
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+        .quienes-somos {
+            background-color: #003366;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+        }
+        .quienes-somos h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .quienes-somos p {
+            font-size: 1.2em;
+            line-height: 1.5;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .quienes-somos img {
+            margin-top: 20px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .cta {
+            background-color: #005b96;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+        }
+        .cta h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .cta p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .cta a {
+            background-color: #0074cc;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .cta a:hover {
+            background-color: #005b96;
+        }
+        .info-section {
+            padding: 40px 20px;
+            margin: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .info-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        .info-section table {
+            width: 100%;
+            border-spacing: 30px;
+        }
+        .info-section td {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+            color: rgb(0, 0, 0);
+            font-size: 1.2em;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .info-section td:hover {
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        .info-section td a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            display: block;
+            margin-top: 10px;
+        }
+        .info-section td a:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .info-section td img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .map {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            background-color: #002244;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        footer p {
+            margin: 0;
+        }
+        footer .social-icons {
+            margin-top: 10px;
+        }
+        footer .social-icons a {
+            margin: 0 10px;
+        }
+        footer .social-icons img {
+            width: 30px;
+            transition: opacity 0.3s ease;
+        }
+        footer .social-icons img:hover {
+            opacity: 0.7;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+        .slider{
+            width: 100%;
+            height: 600px;
+            overflow: hidden;
+            justify-content: center;
+        }
+        .slider ul{
+            display: flex;
+            animation: cambio 5s infinite alternate linear;
+            width: 200%; 
+            
+        }
+        .slider li{
+            width: 100%;
+            list-style: none;
+            
+        }
+        .slider img{
+            width: 90%;
+            height: 90%;
+            object-fit: center;
+        
+            
+        }
+        @keyframes cambio{
+            0%{margin-left: 0;}
+            50%{margin-left: 0;} 
+            
+            
+            55%{margin-left: -100%;} 
+            100%{margin-left: -100%;} 
+        }
+        @media only screen and (min-width:320px) and (max-width:768px){
+            .slider, .slider ul, .slider img{
+                height: 100vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CLINICA MEDICA SANTA FE</h1>
+    </header>
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Servicios</a>
+        <a href="/fotos.html">Fotos</a>
+        <a href="#">Especialidades</a>
+        <a href="/contacto.html">Contacto</a>
+    </nav>
+    <div class="slider">
+        <ul>
+            <li style="display: flex;
+            justify-content: center;
+            margin: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
+                <img src="/img/18384.png" alt="Imagen 1">
+            </li>
+            <li style="display: flex;
+            justify-content: center;
+            margin: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
+                <img src="/img/banner02.png" alt="Imagen 2">
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        <h2>Bienvenidos a Clínica Santa Fe</h2>
+        <p>Ofrecemos una amplia gama de servicios médicos para cuidar de tu salud y bienestar.</p>
+    </div>
+    <div class="quienes-somos">
+        <h2>Quiénes Somos</h2>
+        <p>En Clínica Santa Fe, nos dedicamos a proporcionar atención médica de calidad con un equipo de profesionales altamente capacitados. Nuestra misión es mejorar la salud y el bienestar de nuestra comunidad a través de servicios médicos integrales y personalizados.</p>
+        <img src="img/Imagen1.jpg" alt="Imagen de la clínica">
+    </div>
+    <div class="cta">
+        <h2>¿Y tú, ya separaste tu cita?</h2>
+        <p>Haz clic para separar tu cita:</p>
+        <a href="login.html">Separar mi cita</a>
+    </div>
+    <div class="info-section">
+        <h2>Qué necesitas saber:</h2>
+        <table>
+            <tr>
+                <td style="background-image:url('img/s1.jpg');">
+                    Blog o recursos de salud
+                    <a href="#">Click aquí</a>
+                </td>
+                <td style="background-image:url('img/s2.png');">
+                    Testimonio de pacientes
+                    <a href="/testimonio.html">Click aquí</a>
+                </td>
+            </tr>
+            <tr>
+                <td style="background-image:url('img/s3.png');">
+                    Información sobre seguros
+                    <a href="#">Click aquí</a>
+                </td>
+                <td style="background-image:url('img/s4.png');">
+                    Sección de noticias
+                    <a href="#">Click aquí</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <h3 style="text-align: center; margin-top: 20px;">UBICACION</h3>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3899.9371578500736!2d-76.94405122415026!3d-12.184679244485533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b917d5e3dc0b%3A0x57f2a1141c5da6f!2sInstituto%20CERTUS%20-%20Sede%20Villa!5e0!3m2!1ses!2spe!4v1719582114426!5m2!1ses!2spe" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <footer>
+        <p>© 2024 Clínica Santa Fe. Todos los derechos reservados.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/ClinicaSantaFeCostaRica/?locale=es_LA">
+                <img src="img/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/clinicasantafecr/">
+                <img src="img/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://www.tiktok.com/discover/cl%C3%ADnica-santa-fe">
+                <img src="img/tiktok.png" alt="TikTok">
+            </a>
+        </div>
+    </footer>
+    <a href="/politica.html">Política de Privacidad y Seguridad </a>
+</body>
+</html>
+
+
